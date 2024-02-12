@@ -20,7 +20,7 @@ const getWorkout = async (req, res) => {
     const workout = await Workout.findById(id)
 
     if (!workout) {
-        return res.status(404).json({errro: 'No such workout exists!'})
+        return res.status(404).json({error: 'No such workout exists!'})
     }
 
     res.status(200).json(workout)
@@ -66,7 +66,7 @@ const deleteWorkout = async (req, res) => {
     const workout = await Workout.findOneAndDelete({_id: id})
 
     if (!workout) {
-        return res.status(400).json({errro: 'No such workout exists!'})
+        return res.status(400).json({error: 'No such workout exists!'})
     }
 
     res.status(200).json(workout)
@@ -85,7 +85,7 @@ const updateWorkout = async (req, res) => {
     })
 
     if (!workout) {
-        return res.status(400).json({errro: 'No such workout exists!'})
+        return res.status(400).json({error: 'No such workout exists!'})
     }
 
     res.status(200).json(workout)
