@@ -45,7 +45,7 @@ const WorkoutForm = () => {
         <form className="create" onSubmit={handleSubmit}>
             <h3>Add a New Exercise</h3>
 
-            <label>Exersize title:</label>
+            <label>Exercise title:</label>
             <input
                 type="text"
                 onChange={(e) => setTitle(e.target.value)}
