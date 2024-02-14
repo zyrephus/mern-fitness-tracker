@@ -43,9 +43,9 @@ const WorkoutForm = () => {
     
     return (
         <form className="create" onSubmit={handleSubmit}>
-            <h3>Add a New Workout</h3>
+            <h3>Add a New Exercise</h3>
 
-            <label>Exersize Title:</label>
+            <label>Exersize title:</label>
             <input
                 type="text"
                 onChange={(e) => setTitle(e.target.value)}
@@ -77,7 +77,7 @@ const WorkoutForm = () => {
                 className={emptyFields.includes('sets') ? 'error' : ''}
             />
             
-            <button>Add Workout</button>
+            <button>Add Exercise</button>
             {error && <div className='error'>{error}</div>}
         </form>
     )

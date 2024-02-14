@@ -53,6 +53,7 @@ header a {
 }
 .workout-details p {
   margin: 0;
+  padding-bottom: 0.5em;
   font-size: 0.9em;
   color: #555;
 }
