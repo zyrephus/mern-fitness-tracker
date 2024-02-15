@@ -14,7 +14,7 @@ const userSchema = new Schema ({
         type: String,
         required: true,
         unique: true,
-        minlength: [4, 'Username must be at least 4 characters long']
+        minlength: [4]
     },
     password: {
         type: String,
@@ -33,6 +33,9 @@ userSchema.statics.signup = async function(email, username, password) {
     }
     if (!validator.isStrongPassword(password)) {
         throw Error('Password not strong enough')
+    }
+    if (username.length < 4) {
+        throw Error('Username must be at least 4 characters long');
     }
     
     // Finding if email or username has already been taken
