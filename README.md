@@ -1,12 +1,12 @@
-# Fitness Tracker Application
+# Lift Buddy
 
 ## Overview
 
-The Fitness Tracker is a comprehensive web application designed to help users monitor and manage their fitness routines. Built with the MERN stack (MongoDB, Express.js, React, Node.js), it offers a user-friendly interface for tracking workout sessions, including details such as exercise types, weights, repetitions, and sets. It aims to empower users to achieve their fitness goals through detailed tracking and progress visualization.
+Lift Buddy is a comprehensive web application designed to help users monitor and manage their fitness routines. Built with the MERN stack (MongoDB, Express.js, React, Node.js), it offers a user-friendly interface for tracking workout sessions, including details such as exercise types, weights, repetitions, and sets. It aims to empower users to achieve their fitness goals through detailed tracking and progress visualization.
 
 ## Features
 
-The Fitness Tracker application offers a variety of features designed to help users manage their workouts and track their progress over time. Below are the core functionalities provided by the application:
+Lift Buddy offers a variety of features designed to help users manage their workouts and track their progress over time. Below are the core functionalities provided by the application:
 
 - **User Authentication:** Securely sign up and log in to access personalized workout tracking. The system ensures your data privacy and security, allowing you to focus on your fitness goals.
 
