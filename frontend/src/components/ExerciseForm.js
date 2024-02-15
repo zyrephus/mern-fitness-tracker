@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
+import { useExercisesContext } from '../hooks/useExercisesContext'
 import { useAuthContext } from '../hooks/useAuthContext'
 
-const WorkoutForm = () => {
-    const { dispatch } = useWorkoutsContext()
+const ExerciseForm = () => {
+    const { dispatch } = useExercisesContext()
     const { user } = useAuthContext()
 
     const [title, setTitle] = useState('')
@@ -21,11 +21,11 @@ const WorkoutForm = () => {
             return
         }
 
-        const workout = {title, load, reps, sets}
+        const exercise = {title, load, reps, sets}
 
-        const response = await fetch('/api/workouts', {
+        const response = await fetch('/api/exercises', {
             method: 'POST',
-            body: JSON.stringify(workout),
+            body: JSON.stringify(exercise),
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${user.token}`
@@ -44,8 +44,8 @@ const WorkoutForm = () => {
             setSets('')
             setError(null)
             setEmptyFields([])
-            console.log('New workout added.', json)
-            dispatch({type: 'CREATE_WORKOUT', payload: json})
+            console.log('New exercise added.', json)
+            dispatch({type: 'CREATE_EXERCISE', payload: json})
         }
     }
     
@@ -91,4 +91,4 @@ const WorkoutForm = () => {
     )
 }
 
-export default WorkoutForm
+export default ExerciseForm
