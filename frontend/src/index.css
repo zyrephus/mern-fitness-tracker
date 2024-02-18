@@ -89,6 +89,13 @@ form button {
   font-family: "Poppins";
   border-radius: 4px;
   cursor: pointer;
+  transition: background 0.2s ease-out;
+}
+form button:hover {
+  background: rgba(31, 31, 31, 0.75);
+}
+form button:active {
+  background: rgba(31, 31, 31, 0.9);
 }
 div.error {
   padding: 10px;
@@ -108,7 +115,23 @@ nav {
   align-items: center;
 }
 nav a {
-  margin-left: 10px;
+  margin-left: 15px;
+  text-decoration: none;
+  position: relative; /* Position relative for pseudo-element */
+  padding-bottom: 2px;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+nav a:hover::after {
+  width: 100%; /* Expand the width on hover */
 }
 nav button {
   background: #fff;
